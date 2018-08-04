@@ -1,5 +1,5 @@
 :root {
-    --shadow: 0 1px 5px rgba(104,104,104,0.8);
+    --shadow: 0 1px 4px 1px rgba(104,104,104,0.8);
 }
 html {
     margin: 0;
@@ -7,34 +7,39 @@ html {
 body {
     box-sizing: border-box;
     margin: 0;
-    padding: 30px 30px;
-    font-family: 'Lato', sans-serif;
-    background-color: rgba(104, 104, 104, 0.6);
+    font-family: 'Lato', sans-serif; 
+    background-color: #E2E5D2;
+    
 }
 
 header {
-    height: 400px;
+    max-height: 250px;
+    background-color: rgb(131, 163, 156);
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .transparent_background {
-    background-image: url("img/header_logo.png");
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/header_logo.png?raw=true");
     background-position: center;
     background-size: 80%;
     background-repeat: no-repeat;
     min-height: 200px;
     opacity: 0.1;
-    
-    
+     
 }
 
 .onTop {
+    color: rgb(51, 39, 48);
     position: relative;
-    top: -120px;
+    top: -160px;
 }
 
-h1 {
-    font-size: 3rem;
+#title {
+    font-size: 4rem;
     text-align: center;
+    margin-bottom: 0;
 }
 
 img {
@@ -42,40 +47,57 @@ img {
 }
 
 main {
+    padding: 0 30px;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 40px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
-    "showcase bio";
+    "img-div tribute-info";
 }
 
 #quote {
-    font-size: 1.2rem;
-    font-style: italic;
+    font-family: 'Kalam', cursive;
+    font-size: 1.5rem;
     text-align: center;
+    margin-top: 0;
+    
 }
 
 .wrapper {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 40px;
 }
 
-#showcase {
+#img-div {
     min-height: 700px;
-    grid-area: showcase;
-    background-image: url("img/WaltDisney.jpg");
+    grid-area: img-div;
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/WaltDisney.jpg?raw=true");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: var(--shadow);
 }
 
-#bio {
-    grid-area: bio;
+#tribute-info {
+    grid-area: tribute-info;
 
 }
 
+.tribute-info-para {
+    line-height: 1.5rem;
+}
+
+#tribute-link {
+    color: #929292;
+    text-decoration: none;
+}
+
+#tribute-link:hover {
+    color: rgb(51, 39, 48);
+}
+
 #portfolio {
+    padding: 0 30px;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -91,39 +113,78 @@ main {
 }
 
 #pic1 {
-    background-image: url("img/pic1.jpg")
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/pic1.jpg?raw=true")
 }
 #pic2 {
-    background-image: url("img/pic2.jpg")
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/pic2.jpg?raw=true")
 }
 #pic3 {
-    background-image: url("img/pic3.jpg")
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/pic3.jpg?raw=true")
 }
 #pic4 {
-    background-image: url("img/pic4.jpg")
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/pic4.jpg?raw=true")
 }
 #pic5 {
-    background-image: url("img/pic5.jpg")
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/pic5.jpg?raw=true")
 }
 #pic6 {
-    background-image: url("img/pic6.jpg")
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/pic6.jpg?raw=true")
 }
 #pic7 {
-    background-image: url("img/pic7.jpg")
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/pic7.jpg?raw=true")
 }
 #pic8 {
-    background-image: url("img/pic8.jpg")
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/pic8.jpg?raw=true")
 }
 #pic9 {
-    background-image: url("img/pic9.jpg")
+    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/pic9.jpg?raw=true")
 }
 
 footer {
+    background-color: rgb(131, 163, 156);
     text-align: center;
 }
 
+@media(max-width: 700px) {
+    
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+    "img-div"
+    "tribute-info"
+    }
+    
+
+}
 @media(max-width: 500px) {
     .pictures {
         min-height: 300px;
     }
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+    "img-div"
+    "tribute-info"
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    #quote {
+        font-size: 1.5rem;
+    }
+
+    #img-div {
+        min-height: 300px;
+        background-position: top right;
+        background-size: cover;
+        
+
+    }
+    
 }
