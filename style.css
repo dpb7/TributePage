@@ -1,0 +1,129 @@
+:root {
+    --shadow: 0 1px 5px rgba(104,104,104,0.8);
+}
+html {
+    margin: 0;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 30px 30px;
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(104, 104, 104, 0.6);
+}
+
+header {
+    height: 300px;
+}
+
+.transparent_background {
+    background-image: url("img/header_logo.png");
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    opacity: 0.1;
+    
+    
+}
+
+.onTop {
+    position: relative;
+    top: -120px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "showcase bio";
+}
+
+#quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+#showcase {
+    min-height: 700px;
+    grid-area: showcase;
+    background-image: url("img/WaltDisney.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: var(--shadow);
+}
+
+#bio {
+    grid-area: bio;
+
+}
+
+#portfolio {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+.pictures {
+    min-height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: var(--shadow);
+}
+
+#pic1 {
+    background-image: url("img/pic1.jpg")
+}
+#pic2 {
+    background-image: url("img/pic2.jpg")
+}
+#pic3 {
+    background-image: url("img/pic3.jpg")
+}
+#pic4 {
+    background-image: url("img/pic4.jpg")
+}
+#pic5 {
+    background-image: url("img/pic5.jpg")
+}
+#pic6 {
+    background-image: url("img/pic6.jpg")
+}
+#pic7 {
+    background-image: url("img/pic7.jpg")
+}
+#pic8 {
+    background-image: url("img/pic8.jpg")
+}
+#pic9 {
+    background-image: url("img/pic9.jpg")
+}
+
+footer {
+    text-align: center;
+}
+
+@media(max-width: 500px) {
+    .pictures {
+        min-height: 300px;
+    }
+}
