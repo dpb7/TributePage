@@ -42,15 +42,13 @@ header {
     margin-bottom: 0;
 }
 
-img {
-    max-width: 100%;
-}
+
 
 main {
     padding: 0 30px;
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-template-areas: 
     "img-div tribute-info";
 }
@@ -69,18 +67,28 @@ main {
 }
 
 #img-div {
-    min-height: 700px;
     grid-area: img-div;
-    background-image: url("https://github.com/dpb7/TributePage/blob/master/img/WaltDisney.jpg?raw=true");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+}
+
+figcaption {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+#image {
+    max-width: 100%;
     box-shadow: var(--shadow);
 }
 
 #tribute-info {
     grid-area: tribute-info;
 
+}
+#tribute-heading {
+    margin-top: 0;
 }
 
 .tribute-info-para {
